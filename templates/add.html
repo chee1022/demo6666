@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>新增記帳</h2>
+
+<form method="POST">
+    <label>日期：</label>
+    <input type="date" name="date" value="{{ today }}" required><br><br>
+
+    <label>金額：</label>
+    <input type="number" name="amount" required><br><br>
+
+    <label>剩餘額度：</label>
+    <input type="number" name="balance" required><br><br>
+
+    <button type="submit">送出</button>
+</form>
+{% endblock %}

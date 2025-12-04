@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>記帳列表</h2>
+
+<table>
+    <tr>
+        <th>日期</th>
+        <th>金額</th>
+        <th>剩餘額度</th>
+    </tr>
+
+    {% for r in records %}
+    <tr>
+        <td>{{ r[0] }}</td>
+        <td>{{ r[1] }}</td>
+        <td>{{ r[2] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
